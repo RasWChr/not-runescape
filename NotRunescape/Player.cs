@@ -4,7 +4,10 @@ public class Player
 {
     public int CurrentHp { get; set; } = 35;
     public int MaxHp { get; set; } = 35;
-    public int Gold { get; set; } = 50;
+    public int Gold { get; set; } = StartingGold;
+
+    private const int StartingGold = 100;
+    
     public Dictionary<string, int> Inventory { get; set; } = new()
     {
         { "Lobster", 3 },
