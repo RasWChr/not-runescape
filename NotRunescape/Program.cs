@@ -1,10 +1,25 @@
-﻿using NotRunescape;
+﻿using System.Text;
+using NotRunescape;
 using OsrsTracker;
 
 var bossLogs = new List<BossLog>();
 var player = new Player();
 
 Console.WriteLine("=== OSRS Boss & Combat Tracker ===");
+
+Console.WriteLine("What is your name?");
+string Name = Console.ReadLine()?.Trim();
+
+if (Name != "")
+{
+    Console.Write("Welcome to Gielinor, " + Name + "!");
+}
+else if (string.IsNullOrWhiteSpace(Name))
+{
+    Console.Write("Not a valid name, you are now a Penguin. ");
+    Name = "Penguin";
+    Console.Write("Welcome to Gielinor, " + Name + "!");
+}
 
 while (true)
 {
